@@ -8,7 +8,14 @@
     "@WakeUp911"
   ],
   "requirements": [],
-  "version": "1.0.0",
+  "version": "1.0.2",
   "iot_class": "cloud_polling",
-  "loggers": ["custom_components.jaalee_api"]
+  "loggers": [
+    "custom_components.jaalee_api"
+  ],
+  "logo": "/local/community/jaalee_api/logo.png",
+  "translations": [
+    "translations/en.json",
+    "translations/ru.json"
+  ]
 }
