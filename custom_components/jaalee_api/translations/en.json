@@ -1,0 +1,29 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Jaalee API Setup",
+        "description": "Enter your Jaalee account email address.",
+        "data": {
+          "email": "Email"
+        }
+      },
+      "code": {
+        "title": "Enter Verification Code",
+        "description": "A verification code has been sent to **{email}**. Please enter it below. The code is valid for 60 seconds.",
+        "data": {
+          "code": "Verification Code"
+        }
+      }
+    },
+    "error": {
+      "cannot_get_code": "Failed to request a verification code. Please check your email address and try again.",
+      "invalid_or_expired_code": "The verification code is invalid or has expired. Please go back and request a new one.",
+      "cannot_connect": "Failed to connect to the Jaalee API.",
+      "unknown": "An unknown error occurred."
+    },
+    "abort": {
+      "already_configured": "An account with this email is already configured."
+    }
+  }
+}

@@ -11,27 +11,34 @@ from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant, callback
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from homeassistant.helpers.update_coordinator import CoordinatorEntity
+from homeassistant.const import (
+    PERCENTAGE,
+    UnitOfTemperature,
+)
 
 from .const import DOMAIN, DEVICE_TYPE_MAP
 
 _LOGGER = logging.getLogger(__name__)
 
-# Define sensor types
+# Define sensor types with icons
 SENSOR_TYPES = {
     "temperature": {
         "device_class": SensorDeviceClass.TEMPERATURE,
-        "unit_of_measurement": "°C",
+        "unit_of_measurement": UnitOfTemperature.CELSIUS,
         "state_class": SensorStateClass.MEASUREMENT,
+        "icon": "mdi:thermometer",
     },
     "humidity": {
         "device_class": SensorDeviceClass.HUMIDITY,
-        "unit_of_measurement": "%",
+        "unit_of_measurement": PERCENTAGE,
         "state_class": SensorStateClass.MEASUREMENT,
+        "icon": "mdi:water-percent",
     },
     "power": {
         "device_class": SensorDeviceClass.BATTERY,
-        "unit_of_measurement": "%",
+        "unit_of_measurement": PERCENTAGE,
         "state_class": SensorStateClass.MEASUREMENT,
+        "icon": "mdi:battery",
     },
 }
 
@@ -72,6 +79,7 @@ class JaaleeSensor(CoordinatorEntity, SensorEntity):
         self._attr_device_class = sensor_details.get("device_class")
         self._attr_native_unit_of_measurement = sensor_details.get("unit_of_measurement")
         self._attr_state_class = sensor_details.get("state_class")
+        self._attr_icon = sensor_details.get("icon")
 
     @property
     def device_info(self) -> Dict[str, Any]:
