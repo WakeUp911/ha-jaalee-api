@@ -1,5 +1,7 @@
 Jaalee API Integration for Home Assistant
+
 This is a custom integration for Home Assistant to retrieve data from Jaalee sensors via their cloud API.
+https://sensor.jaalee.com/open/
 
 Installation
 HACS (Recommended)
