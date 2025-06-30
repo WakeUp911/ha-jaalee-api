@@ -1,0 +1,14 @@
+{
+  "domain": "jaalee_api",
+  "name": "Jaalee API",
+  "config_flow": true,
+  "documentation": "https://github.com/WakeUp911/ha-jaalee-api",
+  "issue_tracker": "https://github.com/WakeUp911/ha-jaalee-api/issues",
+  "codeowners": [
+    "@WakeUp911"
+  ],
+  "requirements": [],
+  "version": "1.0.0",
+  "iot_class": "cloud_polling",
+  "loggers": ["custom_components.jaalee_api"]
+}
